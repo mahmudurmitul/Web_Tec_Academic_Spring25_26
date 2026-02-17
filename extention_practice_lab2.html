@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+    <h2>Profile</h2>
+
+    <table>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>
+                        <h4>General Information</h4>
+                    </legend>
+
+                    <table>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td><label for="Name">
+                                            <h4>Name</h4>
+                                        </label></td>
+                                    <td>: <input type="text" id="Name"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Last_name">
+                                            <h4>Last Name</h4>
+                                        </label></td>
+                                    <td>: <input type="text" id="Last_name"></td>
+                                </tr>
+                                <tr>
+                                    <!-- <td><label for="Gender"><h4>Gender</h4></label></td>
+                            <td>: <input type="text" id="Gender"></td> -->
+                                    <td><label for="gender">
+                                            <h4>Gender</h4>
+                                        </label></td>
+                                    <td>: <input type="radio" name="gender" id="male" value="male">
+                                        <label for="male">Male</label>
+                                        <input type="radio" name="gender" id="female" value="female">
+                                        <label for="female">Female</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Father_Name">
+                                            <h4>Father's Name</h4>
+                                        </label></td>
+                                    <td>: <input type="text" id="Father_Name"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Mother_Name">
+                                            <h4>Mother's Name</h4>
+                                        </label></td>
+                                    <td>: <input type="text" id="Mother_Name"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Blood">
+                                            <h4>Blood Group</h4>
+                                        </label></td>
+                                    <td>: <input type="text" id="Blood"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="Religion">
+                                            <h4>Religion</h4>
+                                        </label></td>
+                                    <td>: <input type="text" id="Religion"></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <form action="#" method="post" enctype="multipart/form-data">
+
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <label>Upload Photo</label><br>
+                                                        <input type="file" name="photo" accept="image/*">
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <input type="submit" value="Submit">
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                        </form>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </table>
+
+
+
+                </fieldset>
+            </td>
+
+            <td>
+                <fieldset>
+                    <legend>Contact Information</legend>
+
+                    <table>
+                        <tr>
+                            <td><label for="Email">
+                                    <h4>Email</h4>
+                                </label></td>
+                            <td>: <input type="text" id="Email"></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="Phone">
+                                    <h4>Phone/ Mobile</h4>
+                                </label></td>
+                            <td>: <input type="text" id="Phone"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="Website">
+                                    <h4>Website</h4>
+                                </label></td>
+                            <td>: <input type="text" id="Website"></td>
+                        </tr>
+                        <tr>
+                        <tr>
+                            <td><label>
+                                    <h4>Present Address</h4>
+                                </label></td>
+                            <td>
+                                :
+                                <br><br>
+
+                                Country:
+                                <select name="country">
+                                    <option value="">--Select Country--</option>
+                                    <option value="bangladesh">Bangladesh</option>
+                                    <option value="india">India</option>
+                                    <option value="pakistan">Pakistan</option>
+                                </select>
+
+                                <br><br>
+
+                                City:
+                                <select name="city">
+                                    <option value="">--Select City--</option>
+                                    <option value="dhaka">Dhaka</option>
+                                    <option value="chittagong">Chittagong</option>
+                                    <option value="rajshahi">Rajshahi</option>
+                                </select>
+
+                                <br><br>
+
+                                Area:
+                                <select name="area">
+                                    <option value="">--Select Area--</option>
+                                    <option value="kuratoli">Kuratoli</option>
+                                    <option value="banani">Banani</option>
+                                    <option value="uttara">Uttara</option>
+                                </select>
+                            </td>
+                        </tr>
+
+        </tr>
+    </table>
+    </fieldset>
+    </td>
+    </tr>
+    </table>
+
+    <input type="submit">
+
+</body>
+
+</html>
