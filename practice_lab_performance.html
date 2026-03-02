@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab Practice</title>
+
+<style>
+    #m{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 300px;
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .option-group{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .submit-btn{
+        color: red;
+        padding: 5px 10px;
+    }
+    #option{
+        display: flex;
+    }
+    .hudai{
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+
+</head>
+<body>
+
+<form id="m">
+
+    <!-- First Name -->
+    <div class="container">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname">
+    </div>
+
+    <!-- Last Name -->
+    <div class="container">
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname">
+    </div>
+
+    <!-- Radio Section -->
+    <div>
+        <strong>Favorite Language:</strong>
+
+        <div class="option-group">
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label>
+        </div>
+
+        <div class="option-group">
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label>
+        </div>
+
+        <div class="option-group">
+            <input type="radio" id="js" name="fav_language" value="JavaScript">
+            <label for="js">JavaScript</label>
+        </div>
+    </div>
+
+    <!-- Checkbox Section -->
+    <div>
+        <strong>Skills:</strong>
+
+        <div class="option-group">
+            <input type="checkbox" id="c_html" name="skills[]" value="HTML">
+            <label for="c_html">HTML</label>
+        </div>
+
+        <div class="option-group">
+            <input type="checkbox" id="c_css" name="skills[]" value="CSS">
+            <label for="c_css">CSS</label>
+        </div>
+
+        <div class="option-group">
+            <input type="checkbox" id="c_js" name="skills[]" value="JavaScript">
+            <label for="c_js">JavaScript</label>
+        </div>
+    </div>
+    <div id="option">
+        <label for="cars">Choose a car</label>
+        <select name="" id="cars" size="3" multiple>
+          <option value="volvo">Volvo</option>
+          <option value="saad">Saad</option>
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi_Mitul</option>
+        </select>
+    </div>
+    <!-- Submit Button -->
+    <div class="container">
+        <button type="submit" class="submit-btn">Submit</button>
+    </div>
+    <div>
+        <textarea name="message" id="" style="width: 200px; height: 300px;">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia tempore, provident vitae praesentium illo natus omnis libero soluta error ullam amet, exercitationem, debitis sint doloribus harum. Velit nemo aliquid sed.
+        </textarea>
+    </div>
+    
+
+
+</form>
+
+<form action="">
+    <fieldset>
+        <legend>Peronalia</legend>
+        <label for="fname">First name</label>
+        <input type="text" id="fname">
+    </fieldset>
+</form>
+<form action="">
+  <input list="browsers">
+  <datalist id="browsers">
+    <option value="Edge">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+</form>
+
+<form action="" class="hudai">
+    <label for="Color">Color</label>
+    <input type="color" name="" id="Color">
+    <label for="image">Image</label>
+    <input type="image">
+    <label for="name">Name</label>
+    <!-- use of placeholder and required-->
+    <input type="text" id="name" placeholder="Full Name" required autofocus>
+    <label for="points">Points</label>
+    <input type="number" name="" id="points" step="3" autofocus>
+    <input type="submit">
+    
+</form>
+
+</body>
+</html>

@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice</title>
+    <title>Flex</title>
+    <style>
+        .info{
+            display: flex;
+            align-items: center;
+        }
+        .body{
+            display: flex;
+            align-items: center;
+        }
+        img{
+            width: 120px;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <h2>Profile</h2>
-
-    <table>
-        <tr>
-            <td>
-                <fieldset>
-                    <legend><h4>General Information</h4></legend>
-
-                    <table>
-                        <td>
-                            <table>
+    <h1>Profile</h1>
+    <div class="body">
+        <div class="left_side">
+            <fieldset class="info">
+                <legend>General Information</legend>
+                <table>
                          <tr>
                             <td>First name</td>
                             <td>: Mir Md</td>
@@ -46,25 +55,11 @@
                             <td>: Islam</td>
                         </tr>
                     </table>
-                        </td>
-                        <td>
-                            <table>
-                        <tr>
-                            <td>
-                                <img src="image/images.jpg" height="120">
-                            </td>
-                        </tr>
-                    </table>
-                        </td>
-                    </table>
-                    
-                    
-                    
-                </fieldset>
-            </td>
-
-            <td>
-                <fieldset>
+                    <img src="image/images.jpg" alt="">
+            </fieldset>
+        </div>
+        <div>
+            <fieldset>
                     <legend>Contact Information</legend>
 
                     <table>
@@ -87,9 +82,9 @@
                         </tr>
                     </table>
                 </fieldset>
-            </td>
-        </tr>
-    </table>
-
+        </div>
+        
+    </div>
+    
 </body>
 </html>
