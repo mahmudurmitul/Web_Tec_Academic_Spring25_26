@@ -7,18 +7,17 @@
     <style>
         *{
             margin: 0;
-            padding: o;
+            padding: 0;
             box-sizing: border-box;
         }
-        body{
-    min-height: 100vh; /* ensure body full screen height */
-    padding-bottom: 30px; /* fixed footer space */
-}
         .header{
             text-align: center;
             color: white;
             background-color: black;
             padding: 20px;
+        }
+        body{
+            padding-bottom: 25px;  /* footer height + safety */
         }
         .footer{
             font-size: 12px;
@@ -75,7 +74,7 @@
     <form action="" class="form_info">
         <h4 style="text-align: center; margin-bottom: 10px;">Create Account</h4>
         <label for="email"><h4>Email Address</h4></label>
-        <input type="text" id="email" placeholder="Email Address">
+        <input type="email" id="email" placeholder="Email Address">
         <label for="password"><h4>Password</h4></label>
         <input type="password" id="password">
         <label for="confirm_password"><h4>Confirm Password</h4></label>
