@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h3>User Information</h3>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+
+    <br><br>
+
+    <label id="labelGender">Gender:</label>
+
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="male">Male</label>
+
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label>
+
+    <br><br>
+
+    <button onclick="addData()">Submit</button>
+
+    <br><br>
+
+    <table border="1" id="table">
+
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+        </tr>
+
+    </table>
+
+    <script>
+
+        function addData()
+        {
+
+            const name = document.getElementById("name").value.trim();
+
+            const genders = document.getElementsByName("gender");
+
+            let gender = "";
+
+            for (let i = 0; i < genders.length; i++)
+            {
+                if (genders[i].checked)
+                {
+                    gender = genders[i].value;
+                }
+            }
+
+
+            if (name === "")
+            {
+                alert("Please enter your name");
+                return;
+            }
+
+            if (gender === "")
+            {
+                alert("Please select gender");
+                return;
+            }
+
+            const table = document.getElementById("table");
+
+            const tr = document.createElement("tr");
+
+            const td1 = document.createElement("td");
+            const td2 = document.createElement("td");
+
+            const nameData = document.createTextNode(name);
+            const genderData = document.createTextNode(gender);
+
+            td1.appendChild(nameData);
+            td2.appendChild(genderData);
+
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+
+            table.appendChild(tr);
+
+            document.getElementById("name").value = "";
+
+            for (let i = 0; i < genders.length; i++)
+            {
+                genders[i].checked = false;
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
