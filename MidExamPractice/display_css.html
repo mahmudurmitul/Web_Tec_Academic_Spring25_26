@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Property</title>
+
+    <style>
+        /* Block element */
+        .block-box {
+            display: block;
+            background-color: lightblue;
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        /* Inline element */
+        .inline-box {
+            display: inline;
+            background-color: lightgreen;
+            padding: 10px;
+        }
+
+        /* Inline-block element */
+        .inline-block-box {
+            display: inline-block;
+            background-color: lightcoral;
+            width: 150px;
+            height: 50px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* None (hidden) */
+        .hidden-box {
+            display: none;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Display Property Example</h2>
+
+    <!-- BLOCK -->
+    <div class="block-box">Block 1</div>
+    <div class="block-box">Block 2</div>
+
+    <!-- INLINE -->
+    <span class="inline-box">Inline 1</span>
+    <span class="inline-box">Inline 2</span>
+
+    <br><br>
+
+    <!-- INLINE-BLOCK -->
+    <div class="inline-block-box">Box 1</div>
+    <div class="inline-block-box">Box 2</div>
+
+    <br><br>
+
+    <!-- NONE -->
+    <div class="hidden-box">You can't see me 😎</div>
+
+</body>
+</html>

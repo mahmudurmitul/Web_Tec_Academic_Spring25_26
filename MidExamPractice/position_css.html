@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position Property</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        /* Static */
+        .static-box {
+            position: static;
+            background-color: lightgray;
+            padding: 15px;
+        }
+
+        /* Relative */
+        .relative-box {
+            position: relative;
+            left: 30px;
+            top: 20px;
+            background-color: lightblue;
+            padding: 15px;
+        }
+
+        /* Absolute */
+        .parent {
+            position: relative;
+            height: 200px;
+            background-color: lightyellow;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .absolute-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: lightcoral;
+            padding: 10px;
+        }
+
+        /* Sticky */
+        .sticky-box {
+            position: sticky;
+            top: 0;
+            background-color: orange;
+            padding: 15px;
+            font-weight: bold;
+            z-index: 1000;
+        }
+
+        /* Fixed */
+        .fixed-box {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+
+        /* Long content */
+        .content {
+            padding: 20px;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="padding:10px;">Position Property Example</h2>
+
+    <!-- STATIC -->
+    <div class="static-box">Static (default)</div>
+
+    <!-- RELATIVE -->
+    <div class="relative-box">Relative (moved from its normal position)</div>
+
+    <!-- ABSOLUTE -->
+    <div class="parent">
+        Parent (relative)
+        <div class="absolute-box">Absolute (inside parent)</div>
+    </div>
+
+    <!-- STICKY -->
+    <div class="sticky-box">🔥 I am Sticky Navbar - Scroll me!</div>
+
+    <!-- LONG CONTENT -->
+    <div class="content">
+        <p>
+            This is a long paragraph to help you test scrolling behavior. 
+            You can scroll down and see how the sticky element behaves. 
+            Sticky elements stay in normal position at first, but once 
+            you scroll past them, they stick to the top of the screen.
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+            nisi ut aliquip ex ea commodo consequat.
+        </p>
+
+        <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse 
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <p>
+            Keep scrolling... keep scrolling... keep scrolling... 😎
+        </p>
+
+        <p>
+            More content here so you can clearly see the sticky effect working 
+            perfectly. This is very useful for navigation bars in websites.
+        </p>
+
+        <p>
+            Even more content... more lines... more scrolling...
+            Now you should clearly see:
+            ✔ Sticky stays at top  
+            ✔ Fixed stays at corner  
+        </p>
+
+        <p>
+            Final section... scroll end almost 😄
+        </p>
+    </div>
+
+    <!-- FIXED -->
+    <div class="fixed-box">Fixed (always visible)</div>
+
+</body>
+</html>

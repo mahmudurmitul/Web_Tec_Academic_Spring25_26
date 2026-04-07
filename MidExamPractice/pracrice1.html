@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <style>
+        body {
+            background-color: azure;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: 550px;
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .name {
+            display: flex;
+            justify-content: center;
+            /* flex-wrap: wrap;  important for small screens */
+            gap: 10px;        /* spacing between label + input pairs */
+            margin-bottom: 15px;
+        }
+
+
+        header {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Contact Us</h2>
+    </header>
+    <form action="">
+        <div class="name">
+            <label for="fname"><strong>First Name:</strong></label>
+            <input type="text" id="fname" placeholder="John">
+            <label for="lname"><strong>Last Name:</strong></label>
+            <input type="text" id="lname" placeholder="Doe">
+        </div>
+        <label for="email"><strong>Email:</strong></label><br>
+        <input type="email"  id="email" style="width: 540px;display: block;" placeholder="Email"><br>
+        <label for="message">Message</label>
+        <textarea name="" id="message" style="height: 100px; width:540px; padding-top: 10px;" placeholder="Message..."></textarea><br>
+        <p>Choice Your Country:</p>
+        <input type="radio" id="bangladesh" name="country" value="Bangladesh">
+        <label for="bangladesh">Bangladesh</label><br>
+        <input type="radio" id="india" name="country" value="Bangladesh">
+        <label for="india">India</label><br>
+        <input type="submit" style="width: 200px; display: block;margin: auto;color: rgb(224, 228, 218); background-color: black;">
+
+
+    </form>
+</body>
+</html>

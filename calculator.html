@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+        }
+
+        .calculator{
+            background-color: #333;
+            padding: 20px;
+            border-radius: 15px;
+            width: 340px;
+        }
+
+        #display{
+            width: 100%;
+            height: 60px;
+            font-size: 28px;
+            text-align: right;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        .buttons{
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            column-gap: 0px; 
+            row-gap: 10px;
+        }
+
+        button{
+            height: 60px;
+            font-size: 20px;
+            font-weight: bold;
+            border: 1px solid #333;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #eee;
+        }
+
+        .btn-clear{ 
+            background-color: #e74c3c; 
+            color: white; 
+            grid-column: span 2; 
+        }
+        .btn-op{ 
+            background-color: #f39c12; 
+            color: white; 
+        }
+        .btn-equal{ 
+            background-color: #27ae60; 
+            color: white; 
+            grid-row: span 2; 
+            height: 130px; 
+        }
+        .btn-zero{ 
+            grid-column: span 2; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <input type="text" id="display" readonly placeholder="0">
+
+        <div class="buttons">
+            <button class="btn btn-clear">C</button>
+            <button class="btn btn-op">/</button>
+            <button class="btn btn-op">*</button>
+
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn btn-op">-</button>
+
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn btn-op">+</button>
+
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            
+            <button class="btn btn-equal">=</button>
+            <button class="btn btn-zero">0</button>
+            <button class="btn">.</button>
+        </div>
+    </div>
+
+    <script>
+        const display=document.getElementById('display');
+        const allButtons=document.querySelectorAll('.btn');
+
+        allButtons.forEach(function(button) {
+            button.addEventListener('click', function(){
+                const text=button.innerText;
+
+                if(text==='C') {
+                    display.value='';
+                } 
+                else if(text==='='){
+                    try{
+                        display.value=eval(display.value);
+                    } 
+                    catch(e){
+                        display.value="Error";
+                    }
+                } 
+                else{
+                    display.value+=text;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
